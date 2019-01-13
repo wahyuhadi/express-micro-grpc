@@ -4,6 +4,8 @@ var cookieParser = require('cookie-parser');
 var helmet = require('helmet')
 
 var index = require('./routes/index');
+var user = require('./routes/user');
+
 const app = express();
 /* Cross Domain */
 const allowCrossDomain = async (req, res, next) => {
@@ -27,7 +29,13 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: false }));
 app.use(express.json({limit:1024102420, type:'application/json'}));
 app.use(express.urlencoded({ limit: '50mb', extended: false }));
 app.use(cookieParser());
-app.use('/v1/', index.router);
 
+/* for handle the routers */
+app.use('/v1/', index.router);
+app.use('/v1/users', user.router);
+
+
+
+/* for app listen */
 app.listen(8000)
 console.info("apps running")

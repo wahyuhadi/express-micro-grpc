@@ -27,18 +27,20 @@ module.exports = (sequelize, DataTypes) => {
             }
         },
 		email: {
-            allowNull: {
-                args: false,
-                msg: 'Email address is required'
-            },
             type: DataTypes.STRING,
+            allowNull: false,
+            validate: {
+                isEmail:true
+            },
             unique: {
                 args: true,
                 msg: 'Email address already in use!'
             }
         },
 		role: DataTypes.STRING
-	}, {});
+	}, {
+        paranoid: true
+    });
 	users.associate = function(models) {
 		// associations can be defined here
 	};
