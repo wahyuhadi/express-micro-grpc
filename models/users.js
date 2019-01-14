@@ -37,7 +37,11 @@ module.exports = (sequelize, DataTypes) => {
                 msg: 'Email address already in use!'
             }
         },
-		role: DataTypes.STRING
+		role: {
+            type:   DataTypes.ENUM,
+            defaultValue: 'user',
+            values: ['user','x000']
+        }
 	}, {
         paranoid: true
     });

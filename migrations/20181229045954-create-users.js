@@ -10,7 +10,11 @@ module.exports = {
 			},
 			username: {
 				allowNull: false,
-				type: Sequelize.STRING
+				type: Sequelize.STRING,
+				unique: {
+					args: true,
+					msg: 'Email address already in use!'
+				},
 			},
 			password: {
 				allowNull: false,
@@ -18,9 +22,10 @@ module.exports = {
 			},
 			email: {
 				validate: {
+					unique: true,
 					isEmail:true
 				},
-				unique: {
+				isUnique: {
 					args: true,
 					msg: 'Email address already in use!'
 				},
@@ -28,7 +33,8 @@ module.exports = {
 				type: Sequelize.STRING(100)
 			},
 			role: {
-				type: Sequelize.STRING
+				type:   Sequelize.ENUM,
+            	values: ['user','x000']
 			},
 			createdAt: {
 				allowNull: false,
