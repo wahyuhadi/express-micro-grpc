@@ -1,3 +1,10 @@
+
+![Sequelize Js](http://docs.sequelizejs.com/manual/asset/logo-small.png  "Sequelize JS") 
+
+
+
+# Sequelize 
+
 ## Query sevice
 
 	/* for insert to database  */

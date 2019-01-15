@@ -1,3 +1,10 @@
+
+
+![Router](https://addyosmani.com/backbone-fundamentals/img/backbone_mvc.png) 
+
+
+# Express Routers
+
 ## Set endpoint router
 
 1. Open server.js
