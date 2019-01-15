@@ -1,16 +1,12 @@
 let QueryService = require('../services/QueryService')
 
-module.exports = {
-    /* user registration controllers */
-    userRegistration: async (req, res, next) => {
-        let ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-        let userParams = req.body;
-        QueryService.insert('users', userParams, (err, response) => {
-            if (!err) {
-                return res.status(200).json({ code: 200, status: 'success', message: "succes create users", result: response, connection_from : ip });
-            } else {
-                return res.status(401).json({ code: 401, status: 'error', message: err.errors[0].message, result: null, connection_from : ip });
-            }
-        })
-    } 
-}
+exports.userRegistration =  async (req, res, next) => {
+    let userParams = req.body;
+    QueryService.insert('users', userParams, (err, response) => {
+        if (!err) {
+            return res.status(200).json({ code: 200, error: false, status: 'success', message: "succes create users", result: response});
+        } else {
+            return res.status(401).json({ code: 401, error: true,status: 'error', message: err.errors[0].message, result: null});
+        }
+    })       
+} 
