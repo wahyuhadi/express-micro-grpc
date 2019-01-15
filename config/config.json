@@ -1,8 +1,8 @@
 {
 	"development": {
-		"username": "db_user",
-		"password": "db_password",
-		"database": "db_name",
+		"username": "yes",
+		"password": "tes",
+		"database": "framework",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
 		"port": "3306",
@@ -37,6 +37,7 @@
 		"database": "database_production",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
+		"port": "3306",
 		"port": "3306",
 		"operatorsAliases" : false,
 		"logging" : false,

@@ -15,6 +15,11 @@ https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 # IntelliJ
 /out/
 
+./config/config.json
+config/config.json
+.config/config.json
+config.json
+
 # mpeltonen/sbt-idea plugin
 .idea_modules/
 
