@@ -12,6 +12,7 @@
 * Activity service API for web & mobile apps
 
 ### How do I get set up? ###
+* copy env_example to .env and change environtment
 
 * Install Node.js v10.x.x.x
 
@@ -38,7 +39,7 @@
 
 * Deployment instructions
 
-    `npm start` or `node index.js`    
+    `npm start` or `node server.js`    
 
 
 

@@ -1,14 +1,10 @@
 {
 	"development": {
 		"username": "root",
-		"password": "xxxxxx",
-		"database": "framework",
+		"password": "null",
+		"database": "db_dev",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
-		"options" : {
-			"logging": false,
-			"operatorsAliases": false
-		}
 	},
 	"test": {
 		"username": "root",

@@ -4,10 +4,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var helmet = require('helmet')
-
 var index = require('./routes/index');
 var user = require('./routes/user');
-
+require('dotenv').config()
 const app = express();
 /* Cross Domain */
 const allowCrossDomain = async (req, res, next) => {
@@ -39,5 +38,4 @@ app.use('/v1/users', user.router);
 
 
 /* for app listen */
-app.listen(8000)
-console.info("apps running")
+app.listen(process.env.PORT)
