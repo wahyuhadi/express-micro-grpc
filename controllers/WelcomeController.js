@@ -1,3 +1,5 @@
+/*  author : wahyuhadi */
+
 exports.Welcome = async (req, res, next) => {
 	let ip = req.connection.remoteAddress;
 	let author = {author : "Rahmat Wahyu hadi", connection_from : ip}
