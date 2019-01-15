@@ -9,4 +9,4 @@ exports.userRegistration =  async (req, res, next) => {
             return res.status(401).json({ code: 401, error: true,status: 'error', message: err.errors[0].message, result: null});
         }
     })       
-} 
+}

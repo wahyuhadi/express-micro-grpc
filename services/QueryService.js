@@ -4,3 +4,4 @@ var models  = require('../models')
 exports.insert = async (modelsName, isParams, callback) => {
     models[modelsName].create(isParams).nodeify(callback)
 };
+
