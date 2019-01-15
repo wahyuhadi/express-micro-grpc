@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
 var helmet = require('helmet')
 var index = require('./routes/index');
-var user = require('./routes/user');
+var user = require('./routes/user')
 require('dotenv').config()
 const app = express();
 /* Cross Domain */

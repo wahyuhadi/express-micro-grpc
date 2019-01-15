@@ -1,23 +1,50 @@
 {
 	"development": {
-		"username": "root",
-		"password": "null",
-		"database": "db_dev",
+		"username": "db_user",
+		"password": "db_password",
+		"database": "db_name",
 		"host": "127.0.0.1",
 		"dialect": "mysql",
+		"port": "3306",
+		"operatorsAliases" : false,
+		"logging" : false,
+		"pool" : {
+			"max" : 5,
+			"min" : 2,
+			"acquire" : 30000,
+			"idle" : 200
+		}
 	},
 	"test": {
 		"username": "root",
 		"password": null,
 		"database": "database_test",
 		"host": "127.0.0.1",
-		"dialect": "mysql"
+		"dialect": "mysql",
+		"port": "3306",
+		"operatorsAliases" : false,
+		"logging" : false,
+		"pool" : {
+			"max" : 5,
+			"min" : 2,
+			"acquire" : 30000,
+			"idle" : 200
+		}
 	},
 	"production": {
 		"username": "root",
 		"password": null,
 		"database": "database_production",
 		"host": "127.0.0.1",
-		"dialect": "mysql"
+		"dialect": "mysql",
+		"port": "3306",
+		"operatorsAliases" : false,
+		"logging" : false,
+		"pool" : {
+			"max" : 5,
+			"min" : 2,
+			"acquire" : 30000,
+			"idle" : 200
+		}
 	}
 }
