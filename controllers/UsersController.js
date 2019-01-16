@@ -14,7 +14,10 @@ exports.userRegistration =  async (req, res, next) => {
 }
 
 exports.getAllUsers = async (req, res, next) => {
-	QueryService.SelectAll('users', {}, (err, response) => {
+	let isParams = {
+		attributes: { exclude: ['password'] } 
+	}
+	QueryService.SelectAll('users', isParams, (err, response) => {
 		if (!err) {
             return res.status(200).json({ code: 200, error: false, status: 'success', message: "succes get users", result: response});
 		} else {
