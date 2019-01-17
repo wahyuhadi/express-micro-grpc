@@ -1,21 +1,21 @@
 
 echo "Auto Build ... "
 
-if [ '$1' == 'migrate' ]
+if [[ $1 == 'migrate' ]]
 	then
 	echo "DB migration ..."
 	node node_modules/.bin/sequelize db:migrate
 	echo "DB migrate done"
 	date
 
-elif [ '$1' == 'undo' ]
+elif [[ $1 == 'undo' ]]
 	then
 	echo "Undo DB migration ..."
 	node node_modules/.bin/sequelize db:migrate:undo
 	echo "Undo DB migrate done"
 	date
 
-elif [ '$1' == 'install' ]
+elif [[ $1 == 'install' ]]
 	then
 	echo "NPM install ...."
 	npm install
@@ -23,7 +23,7 @@ elif [ '$1' == 'install' ]
 	date
 	echo ""
 
-elif [ '$1' == 'all' ]
+elif [[ $1 == 'all' ]]
 	then
 	echo "NPM install ...."
 	npm install

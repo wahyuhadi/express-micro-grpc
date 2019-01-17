@@ -22,7 +22,7 @@
     
     - Install all dependencies defined in package.json:
     
-        `npm install`
+        `npm install` or bash build.sh
     
 
 * Database migration (using [Sequelize](http://docs.sequelizejs.com)):
