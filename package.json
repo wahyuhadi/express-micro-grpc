@@ -22,6 +22,7 @@
 		"jsonwebtoken": "^8.4.0",
 		"mali": "^0.10.2",
 		"mysql2": "^1.6.4",
+		"pg": "^7.8.0",
 		"randomstring": "^1.1.5",
 		"sequelize": "^4.42.0",
 		"sequelize-cli": "^5.4.0"

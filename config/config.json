@@ -1,11 +1,11 @@
 {
 	"development": {
-		"username": "root",
-		"password": "mejadankursi",
-		"database": "framework",
-		"host": "127.0.0.1",
-		"dialect": "mysql",
-		"port": "3306",
+		"username": "postgres",
+		"password": "docker",
+		"database": "postgres",
+		"host": "172.17.0.1",
+		"dialect": "postgres",
+		"port": "5432",
 		"operatorsAliases" : false,
 		"logging" : false,
 		"pool" : {
