@@ -6,11 +6,12 @@ const AuthController = require('../controllers/AuthController')
 
 
 /* router index */
-router.post('/', [UserController.userRegistration]);
-router.get('/',[AuthController.DecodeTokenUser, UserController.getAllUsers])
-router.post('/auth', [UserController.loginUser]);
+// router.get("/contoh/:lab", [UserController.TestAPI])
+router.get("/contoh/add", [UserController.AddData])
+router.get("/contoh/all", [UserController.GetData])
 
 /* Export modules */
+
 module.exports = {
     router
 }

@@ -16,10 +16,6 @@ module.exports = {
 					msg: 'Email address already in use!'
 				},
 			},
-			password: {
-				allowNull: false,
-				type: Sequelize.STRING
-			},
 			email: {
 				validate: {
 					unique: true,

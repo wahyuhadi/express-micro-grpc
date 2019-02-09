@@ -1,11 +1,11 @@
 {
 	"development": {
-		"username": "postgres",
-		"password": "docker",
-		"database": "postgres",
-		"host": "172.17.0.1",
-		"dialect": "postgres",
-		"port": "5432",
+		"username": "root",
+		"password": "",
+		"database": "api",
+		"host": "localhost",
+		"dialect": "mysql",
+		"port": "3306",
 		"operatorsAliases" : false,
 		"logging" : false,
 		"pool" : {
