@@ -35,7 +35,15 @@ app.use(cookieParser());
 app.use('/v1/', index.router);
 app.use('/v1/users', user.router);
 
-
+app.use((err, res) => {
+    return res.status(404).json({ 
+        error : true,
+        code: 404,
+        status: 'Not Found',/* MODULES.HTTP.STATUS_CODES[404] */
+        message : 'Endpoint Not Found',
+        result: {}
+    });
+});
 
 /* for app listen */
 app.listen(process.env.PORT)
